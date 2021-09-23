@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "commandes",
+  "info": {
+    "name": "Commandes",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "slug": {
+      "type": "uid"
+    },
+    "datetime": {
+      "type": "datetime"
+    },
+    "amount": {
+      "type": "integer"
+    },
+    "Titre": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "kind": "collectionType",
+  "collectionName": "produits",
+  "info": {
+    "name": "Produits",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "libelle": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "libelle"
+    },
+    "description": {
+      "type": "text"
+    },
+    "plans": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "prix": {
+      "type": "decimal"
+    },
+    "cahier_des_charges": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    }
+  }
+}
